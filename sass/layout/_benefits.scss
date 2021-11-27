@@ -1,0 +1,79 @@
+.section-benefits {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+.benefits__list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  @media screen and (min-width: 768px) {
+    display: grid;
+    grid-template-columns: repeat(2, 0fr);
+  }
+  @media screen and (min-width: 1200px) {
+    display: grid;
+    grid-template-columns: repeat(4, 0fr);
+  }
+}
+.benefits__item {
+  @media screen and (min-width: 480px) and (max-width: 768px) {
+    width: 450px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 354px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 270px;
+  }
+
+  &::before {
+    content: "";
+    margin-bottom: 30px;
+    height: 120px;
+    background-color: var(--secondary-background-color);
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+  }
+}
+
+.icon-antenna.benefits__item::before {
+  content: "";
+  background-image: url(../images/Studio/antenna.svg);
+}
+.icon-clock.benefits__item::before {
+  content: "";
+  background-image: url(../images/Studio/clock.svg);
+}
+.icon-diagram.benefits__item::before {
+  content: "";
+  background-image: url(../images/Studio/diagram.svg);
+}
+.icon-astronaut.benefits__item::before {
+  content: "";
+  background-image: url(../images/Studio/astronaut.svg);
+}
+
+.benefits__title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--primary-text-color);
+  margin-bottom: 10px;
+
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
+}
+.benefits__description {
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  color: var(--secondary-text-color);
+}
